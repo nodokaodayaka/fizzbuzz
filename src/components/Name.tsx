@@ -1,6 +1,6 @@
-import * as React from "react";
+import * as React from 'react'
 
-export const Name = (name: any) => {
-    return <div>test{name}</div>;
-};
+export const Name = (props: any) => {
+  return <div>test{props.name}</div>
+}
 //export default Name;
