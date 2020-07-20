@@ -1,8 +1,10 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import logo from './logo.svg'
+import './App.css'
+import { Name } from './components/Name'
 
 function App() {
+  let name = 'nodokaodayaka'
   return (
     <div className="App">
       <header className="App-header">
@@ -18,9 +20,10 @@ function App() {
         >
           Learn React
         </a>
+        <Name name={name} />
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
