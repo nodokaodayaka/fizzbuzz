@@ -1,6 +1,9 @@
 import * as React from 'react'
 
-export const Name = (props: any) => {
-  return <div>test{props.name}</div>
+interface Name {
+  name: string
 }
-//export default Name;
+
+export const Name = (props: Name) => {
+  return <div>{props.name}</div>
+}
