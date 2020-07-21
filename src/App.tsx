@@ -1,10 +1,12 @@
 import React from 'react'
 import logo from './logo.svg'
 import './App.css'
-import { Name } from './components/Name'
+// import { Name } from './components/Name'
+import { FizzBuzz } from './components/FizzBuzz'
 
 function App() {
-  let name = 'nodokaodayaka'
+  // let name = 'nodokaodayaka'
+  let num = 11
   return (
     <div className="App">
       <header className="App-header">
@@ -20,7 +22,8 @@ function App() {
         >
           Learn React
         </a>
-        <Name name={name} />
+        {/* <Name name={name} /> */}
+        <FizzBuzz num={num} />
       </header>
     </div>
   )
