@@ -2,7 +2,8 @@ import * as React from 'react'
 import { FizzBuzz } from './FizzBuzz'
 
 export const FizzBuzzList = (props: any) => {
-  let list = [...Array(props.num)].map((_, i) => i + 1)
+  const { num } = props
+  let list = [...Array(num)].map((_, i) => i + 1)
 
   return (
     <div>
