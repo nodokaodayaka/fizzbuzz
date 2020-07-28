@@ -1,12 +1,10 @@
 import React from 'react'
 import logo from './logo.svg'
 import './App.css'
-// import { Name } from './components/Name'
 import { FizzBuzz } from './components/FizzBuzz'
 import { FizzBuzzList } from 'components/FizzBuzzList'
 
 function App() {
-  // let name = 'nodokaodayaka'
   let num = 11
   return (
     <div className="App">
@@ -23,7 +21,6 @@ function App() {
         >
           Learn React
         </a>
-        {/* <Name name={name} /> */}
         <FizzBuzz num={num} />
         <FizzBuzzList num={num} />
       </header>
