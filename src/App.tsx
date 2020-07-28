@@ -1,13 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
-// import { Name } from './components/Name'
 import { FizzBuzz } from './components/FizzBuzz'
-import { FizzBuzzList } from 'components/FizzBuzzList'
+//import { FizzBuzzList } from 'components/FizzBuzzList'
+import { ChangeEvent } from 'react';
 
 function App() {
-  // let name = 'nodokaodayaka'
-  let num = 11
+  const [count, setCount] = useState(1);
+
+  const handleEvent = (e:ChangeEvent<HTMLInputElement>) => {
+    console.log(e.target.value)
+    setCount(Number(e.target.value))
+}
+
   return (
     <div className="App">
       <header className="App-header">
@@ -23,9 +28,9 @@ function App() {
         >
           Learn React
         </a>
-        {/* <Name name={name} /> */}
-        <FizzBuzz num={num} />
-        <FizzBuzzList num={num} />
+        <input type="text" onChange={handleEvent} />
+        <FizzBuzz num={count} />
+        {/* <FizzBuzzList num={num} /> */}
       </header>
     </div>
   )
