@@ -4,13 +4,13 @@ import './App.css'
 import { FizzBuzz } from './components/FizzBuzz'
 //import { FizzBuzzList } from 'components/FizzBuzzList'
 import { ChangeEvent } from 'react'
+import TextField from '@material-ui/core/TextField'
 
 function App() {
-  const [count, setCount] = useState(1)
+  const [count, setCount] = useState('1')
 
   const handleEvent = (e: ChangeEvent<HTMLInputElement>) => {
-    console.log(e.target.value)
-    setCount(Number(e.target.value))
+    setCount(e.target.value)
   }
 
   return (
@@ -28,7 +28,18 @@ function App() {
         >
           Learn React
         </a>
-        <input type="text" onChange={handleEvent} defaultValue={count} />
+        <br />
+        <TextField
+          id="outlined-number"
+          label="Fizzbuzz"
+          type="number"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="outlined"
+          onChange={handleEvent}
+          defaultValue={count}
+        />
         <FizzBuzz num={count} />
         {/* <FizzBuzzList num={num} /> */}
       </header>
