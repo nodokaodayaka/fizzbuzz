@@ -7,5 +7,8 @@ interface FizzBuzz {
 
 export const FizzBuzz = (props: FizzBuzz) => {
   const { num } = props
-  return <div>{calc(num)}</div>
+  if (num.length < 1) {
+    return <div></div>
+  }
+  return <div>{calc(Number(num))}</div>
 }

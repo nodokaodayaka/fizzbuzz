@@ -1,9 +1,4 @@
-export const calc = (inputNum: String) => {
-  if (inputNum.length < 1) {
-    return ''
-  }
-
-  let num = Number(inputNum)
+export const calc = (num: number) => {
   if (num % 3 === 0 && num % 5 === 0) {
     return 'FizzBuzz'
   }
