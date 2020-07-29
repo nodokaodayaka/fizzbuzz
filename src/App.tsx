@@ -6,11 +6,10 @@ import { FizzBuzz } from './components/FizzBuzz'
 import { ChangeEvent } from 'react'
 
 function App() {
-  const [count, setCount] = useState(1)
+  const [count, setCount] = useState('1')
 
   const handleEvent = (e: ChangeEvent<HTMLInputElement>) => {
-    console.log(e.target.value)
-    setCount(Number(e.target.value))
+    setCount(e.target.value)
   }
 
   return (
@@ -28,7 +27,7 @@ function App() {
         >
           Learn React
         </a>
-        <input type="text" onChange={handleEvent} defaultValue={count} />
+        <input type="number" onChange={handleEvent} defaultValue={count} />
         <FizzBuzz num={count} />
         {/* <FizzBuzzList num={num} /> */}
       </header>

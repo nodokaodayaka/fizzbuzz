@@ -8,7 +8,7 @@ export const FizzBuzzList = (props: any) => {
   return (
     <div>
       {list.map((value) => {
-        return <FizzBuzz key={value} num={value} />
+        return <FizzBuzz key={value} num={String(value)} />
       })}
     </div>
   )

@@ -2,7 +2,7 @@ import * as React from 'react'
 import { calc } from '../calc/FizzBuzzCalculator'
 
 interface FizzBuzz {
-  num: number
+  num: String
 }
 
 export const FizzBuzz = (props: FizzBuzz) => {
