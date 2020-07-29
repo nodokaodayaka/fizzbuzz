@@ -3,15 +3,15 @@ import logo from './logo.svg'
 import './App.css'
 import { FizzBuzz } from './components/FizzBuzz'
 //import { FizzBuzzList } from 'components/FizzBuzzList'
-import { ChangeEvent } from 'react';
+import { ChangeEvent } from 'react'
 
 function App() {
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(1)
 
-  const handleEvent = (e:ChangeEvent<HTMLInputElement>) => {
+  const handleEvent = (e: ChangeEvent<HTMLInputElement>) => {
     console.log(e.target.value)
     setCount(Number(e.target.value))
-}
+  }
 
   return (
     <div className="App">
@@ -28,7 +28,7 @@ function App() {
         >
           Learn React
         </a>
-        <input type="text" onChange={handleEvent} />
+        <input type="text" onChange={handleEvent} defaultValue={count} />
         <FizzBuzz num={count} />
         {/* <FizzBuzzList num={num} /> */}
       </header>
