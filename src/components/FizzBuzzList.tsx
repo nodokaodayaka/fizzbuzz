@@ -3,7 +3,12 @@ import { FizzBuzz } from './FizzBuzz'
 
 export const FizzBuzzList = (props: any) => {
   const { num } = props
-  let list = [...Array(num)].map((_, i) => i + 1)
+
+  if (num.length > 1) {
+    return <div>一桁までです。</div>
+  }
+
+  let list = [...Array(Number(num))].map((_, i) => i + 1)
 
   return (
     <div>

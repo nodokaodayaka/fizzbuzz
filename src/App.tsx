@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
 import { FizzBuzz } from './components/FizzBuzz'
-//import { FizzBuzzList } from 'components/FizzBuzzList'
+import { FizzBuzzList } from 'components/FizzBuzzList'
 import { ChangeEvent } from 'react'
 import TextField from '@material-ui/core/TextField'
 
@@ -41,7 +41,7 @@ function App() {
           defaultValue={count}
         />
         <FizzBuzz num={count} />
-        {/* <FizzBuzzList num={num} /> */}
+        <FizzBuzzList num={count} />
       </header>
     </div>
   )
