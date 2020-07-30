@@ -39,9 +39,6 @@ function App() {
           variant="outlined"
           onChange={handleEvent}
           defaultValue={count}
-          onKeyDown={() => {
-            console.log({ count })
-          }}
         />
         <FizzBuzz num={count} />
         <FizzBuzzList num={count} />
