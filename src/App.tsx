@@ -10,6 +10,9 @@ function App() {
   const [count, setCount] = useState('1')
 
   const handleEvent = (e: ChangeEvent<HTMLInputElement>) => {
+    if (e.target.value.length > 3) {
+      e.target.value = e.target.value.slice(0, 3)
+    }
     setCount(e.target.value)
   }
 
