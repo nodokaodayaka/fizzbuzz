@@ -26,6 +26,10 @@ function App() {
   const [count, setCount] = useState('1')
 
   const handleEvent = (e: ChangeEvent<HTMLInputElement>) => {
+    const value = Number(e.target.value);
+    if (value < 0) {
+      e.target.value = "0";
+    }
     if (e.target.value.length > 3) {
       e.target.value = e.target.value.slice(0, 3)
     }
@@ -56,6 +60,9 @@ function App() {
           type="number"
           InputLabelProps={{
             shrink: true,
+          }}
+          inputProps={{
+            min:0
           }}
           variant="outlined"
           onChange={handleEvent}
