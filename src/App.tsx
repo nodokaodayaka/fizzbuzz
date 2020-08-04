@@ -1,26 +1,9 @@
 import React, { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
-import { FizzBuzz } from './components/FizzBuzz'
-import { FizzBuzzList } from 'components/FizzBuzzList'
 import { ChangeEvent } from 'react'
 import TextField from '@material-ui/core/TextField'
-import { makeStyles } from '@material-ui/core/styles'
-import Paper from '@material-ui/core/Paper'
-import Typography from '@material-ui/core/Typography'
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    '& > *': {
-      margin: theme.spacing(5),
-      padding: theme.spacing(3),
-      width: theme.spacing(32),
-      height: theme.spacing(16),
-    },
-  },
-}))
+import FizzBuzzPaper from './components/FizzBuzzPaper'
 
 function App() {
   const [count, setCount] = useState('1')
@@ -31,8 +14,6 @@ function App() {
     }
     setCount(e.target.value)
   }
-
-  const classes = useStyles()
 
   return (
     <div className="App">
@@ -62,17 +43,8 @@ function App() {
           defaultValue={count}
         />
 
-        <div className={classes.root}>
-          <Paper>
-            <Typography variant="h5" gutterBottom>
-              {count}
-            </Typography>
-            <Typography variant="h2" gutterBottom>
-              <FizzBuzz num={count} />
-            </Typography>
-          </Paper>
-        </div>
-        <FizzBuzzList num={count} />
+        <FizzBuzzPaper num={count} />
+        {/*<FizzBuzzList num={count} />*/}
       </header>
     </div>
   )
