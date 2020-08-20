@@ -1,9 +1,11 @@
 # fizzbuzz
 
 ## エッセンス
-- [ ] TDD
+- [ ] Tdd
 - [ ] TypeScript
-
+- [ ] React
+- [ ] Redux
+- [ ] Material-ui
 
 ## 悩みどころ
 - 型表現プログラム
@@ -18,4 +20,8 @@ $ brew install npm
 $ npx create-react-app project && cd project
 
 # 画面共有しながらコーディング
+
+
+
+
 
