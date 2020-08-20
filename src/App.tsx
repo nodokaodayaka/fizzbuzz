@@ -6,8 +6,6 @@ import { FizzBuzzList } from 'components/FizzBuzzList'
 import { ChangeEvent } from 'react'
 import TextField from '@material-ui/core/TextField'
 import { makeStyles } from '@material-ui/core/styles'
-import Paper from '@material-ui/core/Paper'
-import Typography from '@material-ui/core/Typography'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,19 +22,18 @@ const useStyles = makeStyles((theme) => ({
 
 function App() {
   const [count, setCount] = useState('1')
+  const classes = useStyles()
 
   const handleEvent = (e: ChangeEvent<HTMLInputElement>) => {
-    const value = Number(e.target.value);
+    const value = Number(e.target.value)
     if (value < 0) {
-      e.target.value = "0";
+      e.target.value = '0'
     }
     if (e.target.value.length > 3) {
       e.target.value = e.target.value.slice(0, 3)
     }
     setCount(e.target.value)
   }
-
-  const classes = useStyles()
 
   return (
     <div className="App">
@@ -62,7 +59,7 @@ function App() {
             shrink: true,
           }}
           inputProps={{
-            min:0
+            min: 0,
           }}
           variant="outlined"
           onChange={handleEvent}
@@ -70,16 +67,12 @@ function App() {
         />
 
         <div className={classes.root}>
-          <Paper>
-            <Typography variant="h5" gutterBottom>
-              {count}
-            </Typography>
-            <Typography variant="h2" gutterBottom>
-              <FizzBuzz num={count} />
-            </Typography>
-          </Paper>
+          <FizzBuzz num={count} />
         </div>
-        <FizzBuzzList num={count} />
+
+        <div className={classes.root}>
+          <FizzBuzzList num={count} />
+        </div>
       </header>
     </div>
   )
