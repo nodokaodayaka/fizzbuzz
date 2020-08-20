@@ -7,10 +7,10 @@ export const FizzBuzzList = (props: any) => {
   let list = [...Array(Number(num))].map((_, i) => i + 1)
 
   return (
-    <div>
+    <>
       {list.map((value) => {
         return <FizzBuzz key={value} num={String(value)} />
       })}
-    </div>
+    </>
   )
 }
